@@ -28,9 +28,9 @@ const Blog = ()=>{
  useEffect(() => {
   setTimeout(() => {
     setLoading(false)
-  }, 3000);
-  return () =>  fetchPosts();
-}, [posts]);
+  }, 1000);
+  return fetchPosts
+}, []);
 
 
   return (
