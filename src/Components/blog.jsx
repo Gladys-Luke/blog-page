@@ -10,22 +10,22 @@ const Blog = ()=>{
   const [posts, setPosts]= useState([]);
   const [loading, setLoading]= useState(true);
 
- const  fetchPosts = async () => {
+//  const  fetchPosts = async () => {
      
-    const response = await fetch('https://api.hashnode.com/', {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify({ query }),
-    })
+//     const response = await fetch('https://api.hashnode.com/', {
+//       method: 'POST',
+//       headers: {
+//         'Content-type': 'application/json',
+//       },
+//       body: JSON.stringify({ query }),
+//     })
 
-    const apiResponse = await response.json();
-    const { posts } = apiResponse.data.user.publication;
-    console.log(posts)
+//     const apiResponse = await response.json();
+//     const { posts } = apiResponse.data.user.publication;
+//     console.log(posts)
 
-    setPosts(posts)
- }  
+//     setPosts(posts)
+//  }  
  useEffect(() => {
   const  fetchPosts = async () => {
      
