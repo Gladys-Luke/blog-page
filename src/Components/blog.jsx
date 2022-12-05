@@ -22,10 +22,27 @@ const Blog = ()=>{
 
     const apiResponse = await response.json();
     const { posts } = apiResponse.data.user.publication;
+    console.log(posts)
 
     setPosts(posts)
  }  
  useEffect(() => {
+  const  fetchPosts = async () => {
+     
+    const response = await fetch('https://api.hashnode.com/', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify({ query }),
+    })
+
+    const apiResponse = await response.json();
+    const { posts } = apiResponse.data.user.publication;
+    console.log(posts)
+
+    setPosts(posts)
+ }  
   setTimeout(() => {
     setLoading(false)
   }, 1000);
